@@ -1,0 +1,35 @@
+- categorie: sandwich
+  produits:
+        - jambon-fromage
+        - dinde-salade-tomate
+        - thon-salade
+  prix: 3
+- categorie: cannette
+  produits:
+        - coca-cola
+        - coca light
+        - ice tea pèche
+        - fanta citron
+        - minute maid pomme
+        - minute maid orange
+        - oasis
+  prix: 1
+- categorie: barre choco
+  produits:
+        - kit-kat
+        - snickers
+        - kinder bueno
+        - lion
+- produit: croque-monsieur
+  prix: 1
+- produit: crêpe salée
+  prix: 1.5
+- formule: sandwich-cannette
+  produits:
+        - sandwich
+        - cannette
+  prix: 3.5
+- formule: croque-cannette
+  produits:
+        - croque-monsieur
+        - cannette
