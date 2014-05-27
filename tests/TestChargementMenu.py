@@ -1,5 +1,6 @@
 from nose.tools import *
 from foodOverview.Menu import Menu
+from foodOverview.MenuLoader import MenuLoader
 
 ressources = './tests/ressources/'
 menu_simple = 'menu_simple.yml'
@@ -10,7 +11,7 @@ menu = ''
 
 def testChargementMenuSimple():
     givenUnMenuSimple()
-    menu = whenLeMenuEstCharge()
+    whenLeMenuEstCharge()
 
     thenLeMenuContient('crepe salee')
     thenLeMenuContient('sandwich')
@@ -21,6 +22,10 @@ def testChargementMenuSimple():
 
 def testChargementProduitComposite():
     givenUnMenuComplexe()
+    whenLeMenuEstCharge()
+
+    thenLeMenuContient('sandwich')
+    thenLeMenuContient('barre choco')
 
 def givenUnMenuSimple():
     global fichierMenu
@@ -32,10 +37,10 @@ def givenUnMenuComplexe():
 
 def whenLeMenuEstCharge():
     global menu
-    menu = Menu(fichierMenu)
+    menu = MenuLoader().loadMenu(fichierMenu)
 
 def thenLeMenuContient(produit):
     assert_true(menu.findProduct(produit) != None)
 
 def thenLeProduitCoute(produit, prix):
-    assert_equal(menu.findProduct(produit).getPrix(), prix)
+    assert_equal(menu.findProduct(produit).getPrice(), prix)

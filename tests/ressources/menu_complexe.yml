@@ -1,11 +1,11 @@
-- categorie: sandwich
-  produits:
+- produit: sandwich
+  choix:
         - jambon-fromage
         - dinde-salade-tomate
         - thon-salade
   prix: 3
-- categorie: cannette
-  produits:
+- produit: cannette
+  choix:
         - coca-cola
         - coca light
         - ice tea pèche
@@ -14,12 +14,13 @@
         - minute maid orange
         - oasis
   prix: 1
-- categorie: barre choco
-  produits:
+- produit: barre choco
+  choix:
         - kit-kat
         - snickers
         - kinder bueno
         - lion
+  prix: 1
 - produit: croque-monsieur
   prix: 1
 - produit: crêpe salée
